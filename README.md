@@ -1,6 +1,6 @@
 # flutter_widget_lifecycle
 
-A new Flutter package can detect when widget is appear or not.
+A new Flutter package can detect when the widget appears or not.
 
 ## Getting Started
 ```dart
