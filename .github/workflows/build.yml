@@ -1,0 +1,48 @@
+Skip to content
+Search or jump to…
+
+Pull requests
+Issues
+Trending
+Explore
+ 
+@tbm98 
+rrousselGit
+/
+provider
+3.3k
+Code
+Issues
+13
+Bugs
+4
+Pull requests
+2
+Actions
+Wiki
+Releases
+48
+More
+provider/.github/workflows/build.yml
+@rrousselGit
+rrousselGit use rrousselGit/ci for the CI (#579)
+Latest commit 2c5a029 on Nov 29, 2020
+ History
+ 1 contributor
+26 lines (21 sloc)  487 Bytes
+  
+name: Build
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  flutter:
+    runs-on: ubuntu-latest
+    container: cirrusci/flutter:latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Execute test script
+        run: flutter test
