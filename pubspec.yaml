@@ -1,19 +1,18 @@
 name: flutter_widget_lifecycle
 description: A new Flutter package can detect when widget is appear or not.
-version: 0.0.1
-author: tbm98 <tbm98.dev@gmail.com>
+version: 1.0.0-nullsafety.1
 homepage: https://github.com/tbm98/flutter_widget_lifecycle
 repository: https://github.com/tbm98/flutter_widget_lifecycle
 issue_tracker: https://github.com/tbm98/flutter_widget_lifecycle/issues
 
 environment:
-  sdk: ">=2.7.0 <3.0.0"
-  flutter: ">=1.17.0"
+  sdk: ">=2.12.0 <3.0.0"
+  flutter: ">=2.0.0"
 
 dependencies:
   flutter:
     sdk: flutter
-  visibility_detector: ^0.1.5
+  visibility_detector: ^0.2.0-nullsafety.1
 
 
 dev_dependencies:

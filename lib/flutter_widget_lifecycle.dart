@@ -5,16 +5,15 @@ import 'package:visibility_detector/visibility_detector.dart';
 
 class LifeCycleWidget extends StatefulWidget {
   LifeCycleWidget({
-    Key key,
-    @required this.child,
+    Key? key,
+    required this.child,
     this.onAppear,
     this.onDisappear,
-  })  : assert(child != null),
-        super(key: key);
+  })  : super(key: key);
 
   final Widget child;
-  final VoidCallback onAppear;
-  final VoidCallback onDisappear;
+  final VoidCallback? onAppear;
+  final VoidCallback? onDisappear;
 
   @override
   _LifeCycleWidgetState createState() => _LifeCycleWidgetState();
@@ -23,17 +22,17 @@ class LifeCycleWidget extends StatefulWidget {
 class _LifeCycleWidgetState extends State<LifeCycleWidget>
     with WidgetsBindingObserver {
   final _key = UniqueKey();
-  VisibilityInfo _info;
+  VisibilityInfo? _info;
 
   @override
   void initState() {
-    WidgetsBinding.instance.addObserver(this);
+    WidgetsBinding.instance?.addObserver(this);
     super.initState();
   }
 
   @override
   void dispose() {
-    WidgetsBinding.instance.removeObserver(this);
+    WidgetsBinding.instance?.removeObserver(this);
     super.dispose();
   }
 
@@ -53,10 +52,6 @@ class _LifeCycleWidgetState extends State<LifeCycleWidget>
 
   bool _isShowing() {
     return (_info?.visibleFraction ?? 0) == 1;
-  }
-
-  bool _isHidden() {
-    return (_info?.visibleFraction ?? 0) == 0;
   }
 
   void _handleVisibilityInfoChanged(VisibilityInfo info) {

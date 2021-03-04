@@ -20,7 +20,7 @@ void main() {
       }, child: Center(
         child: Builder(
           builder: (context) {
-            return FlatButton(
+            return TextButton(
               child: Text('back'),
               onPressed: () {
                 Navigator.of(context).pop();
@@ -38,7 +38,7 @@ void main() {
         disappear++;
       }, child: Scaffold(body: Center(child: Builder(
         builder: (context) {
-          return FlatButton(
+          return TextButton(
             onPressed: () {
               Navigator.of(context).push(MaterialPageRoute(builder: (context) {
                 return _page2();
